@@ -34,7 +34,7 @@
             this.labelNameL = new System.Windows.Forms.Label();
             this.listPeople = new System.Windows.Forms.ListBox();
             this.buttonAdd = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.buttonRefresh = new System.Windows.Forms.Button();
             this.textNameF = new System.Windows.Forms.TextBox();
             this.textNameL = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
@@ -96,16 +96,18 @@
             this.buttonAdd.TabIndex = 2;
             this.buttonAdd.Text = "Add Person";
             this.buttonAdd.UseVisualStyleBackColor = true;
+            this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
             // 
-            // button2
+            // buttonRefresh
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(37, 280);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(126, 42);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "Refresh List";
-            this.button2.UseVisualStyleBackColor = true;
+            this.buttonRefresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonRefresh.Location = new System.Drawing.Point(37, 280);
+            this.buttonRefresh.Name = "buttonRefresh";
+            this.buttonRefresh.Size = new System.Drawing.Size(126, 42);
+            this.buttonRefresh.TabIndex = 3;
+            this.buttonRefresh.Text = "Refresh List";
+            this.buttonRefresh.UseVisualStyleBackColor = true;
+            this.buttonRefresh.Click += new System.EventHandler(this.buttonRefresh_Click);
             // 
             // textNameF
             // 
@@ -128,7 +130,7 @@
             this.ClientSize = new System.Drawing.Size(477, 365);
             this.Controls.Add(this.textNameL);
             this.Controls.Add(this.textNameF);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.buttonRefresh);
             this.Controls.Add(this.buttonAdd);
             this.Controls.Add(this.listPeople);
             this.Controls.Add(this.labelNameL);
@@ -150,7 +152,7 @@
         private System.Windows.Forms.Label labelNameL;
         private System.Windows.Forms.ListBox listPeople;
         private System.Windows.Forms.Button buttonAdd;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button buttonRefresh;
         private System.Windows.Forms.TextBox textNameF;
         private System.Windows.Forms.TextBox textNameL;
     }
